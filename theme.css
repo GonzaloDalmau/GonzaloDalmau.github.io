@@ -4,7 +4,7 @@ html {
 body {
     background-color: #f0f0f0;
     font-family: Arial, sans-serif;
-    transition: background-color 0.3s, color 0.3s;
+    color: #333;
 }
 body.dark-mode nav button {
     color: #f0f0f0;
