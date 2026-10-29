@@ -1,3 +1,6 @@
+html {
+    scrollbar-gutter: stable;
+}
 body {
     background-color: #f0f0f0;
     font-family: Arial, sans-serif;
@@ -17,6 +20,7 @@ nav{
     background-color: #f8f8f8;
     padding: 10px;
     text-align: center;
+    text-rendering: optimizeLegibility;
     margin-bottom: 20px;
     position: relative;
 }
