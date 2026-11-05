@@ -159,3 +159,10 @@ body.dark-mode article {
         grid-template-columns: 1fr;
     }
 }
+
+.brock-image  {
+    justify-content: right;
+    display: block;
+    margin-left: auto;
+    border-radius: 18px;
+}
