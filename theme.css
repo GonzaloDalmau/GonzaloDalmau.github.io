@@ -19,7 +19,8 @@ body {
   margin: 20px 0;
 }
 .project-card {
-  background-color: #fff;
+  background-image: linear-gradient(to left, #fdfbf7, #f4efe6);
+
   border: 1px solid #ccc;
   border-radius: 5px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -27,11 +28,9 @@ body {
   flex: 1 1 300px;
 }
 .project-button {
-  background-color: #15385e;
-  color: white;
+  background-color: white;
   padding: 10px 15px;
   border-radius: 5px;
-  text-decoration: none;
   display: inline-block;
   margin-top: 10px;
   transition: background-color 0.2s ease;
@@ -45,21 +44,19 @@ body.dark-mode nav button {
 .section-introduction {
   margin: 20px 0;
   padding: 20px;
-  background-color: navy;
-  color: white;
+  background-image: linear-gradient(to left, #fdfbf7, #f4efe6);
+
   border-radius: 5px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 .work {
-  background-color: #15385e;
-  color: white;
+  background-color: white;
   padding: 15px;
   border-radius: 5px;
   text-decoration: none;
 }
 .git {
-  background-color: #15385e;
-  color: white;
+  background-color: white;
   padding: 15px;
   border-radius: 5px;
   text-decoration: none;
@@ -82,7 +79,7 @@ article {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 nav {
-  background-color: #f8f8f8;
+  background-image: linear-gradient(to left, #fdfbf7, #f4efe6);
   padding: 10px;
   text-align: center;
   text-rendering: optimizeLegibility;
