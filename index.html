@@ -3,104 +3,106 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="theme.css" />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/icon?family=Material+Icons"
-    />
-    <title>Portfolio</title>
+    <title>Gonzalo Dalmau | Web Developer</title>
+    <meta name="description" content="Portfolio of Gonzalo Dalmau, a web developer and Computer Science student at Brock University." />
+    <meta property="og:title" content="Gonzalo Dalmau | Web Developer" />
+    <meta property="og:description" content="Web developer and Computer Science student at Brock University." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://gonzalodalmau.github.io/" />
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
     <script>
-      if (localStorage.getItem("theme") === "dark") {
-        document.documentElement.classList.add("dark-mode");
-      }
+      (function () {
+        var saved = null;
+        try { saved = localStorage.getItem("theme"); } catch (e) {}
+        if (saved === "dark" || (!saved && matchMedia("(prefers-color-scheme: dark)").matches)) {
+          document.documentElement.classList.add("dark-mode");
+        }
+      })();
     </script>
+    <link rel="stylesheet" href="theme.css" />
   </head>
   <body>
-    <nav>
-      <a href="index.html">Home</a> | <a href="contact.html">Contact</a> |
-      <a href="education.html">Education</a>
-      <button><i class="material-icons">dark_modes</i></button>
-    </nav>
-    <section class="section-introduction">
-      <p>
-        Hi, I'm Gonzalo Dalmau, a passionate web developer. Explore my work and
-        learn more about me.
-      </p>
-      <button class="work">
-        <a href="work.html" style="color: black; text-decoration: none"
-          >View My Work</a
-        >
-      </button>
-      <button class="git">
-        <a
-          href="https://github.com/GonzaloDalmau"
-          style="color: black; text-decoration: none"
-          >Github
-          <i class="material-icons">arrow_outward</i>
-        </a>
-      </button>
-    </section>
-    <div class="projects-container">
-      <div class="project-card">
-        <div class="project-content">
-          <h3>Powerlifting Tracker</h3>
-          <p>Description of Project 1.</p>
-          <button class="project-button">
-            <a
-              href="https://github.com/GonzaloDalmau/powerlifting-tracker"
-              style="text-decoration: none; color: black"
-            >
-              View on GitHub
-            </a>
-          </button>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <nav class="site-nav" aria-label="Main">
+        <ul class="nav-links">
+          <li><a href="index.html" aria-current="page">Home</a></li>
+          <li><a href="work.html">Work</a></li>
+          <li><a href="education.html">Education</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <button id="themeToggle" class="theme-toggle" type="button" aria-label="Dark mode">
+          <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3a9 9 0 1 0 9 9 7 7 0 0 1-9-9Z" /></svg>
+          <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 7a5 5 0 1 0 0 10 5 5 0 0 0 0-10ZM11 1h2v3h-2V1Zm0 19h2v3h-2v-3ZM1 11h3v2H1v-2Zm19 0h3v2h-3v-2ZM4.2 2.8l2.1 2.1-1.4 1.4-2.1-2.1 1.4-1.4Zm14.9 14.9 2.1 2.1-1.4 1.4-2.1-2.1 1.4-1.4ZM2.8 19.8l2.1-2.1 1.4 1.4-2.1 2.1-1.4-1.4ZM17.7 4.9l2.1-2.1 1.4 1.4-2.1 2.1-1.4-1.4Z" /></svg>
+        </button>
+      </nav>
+    </header>
+
+    <main id="main">
+      <section class="hero section">
+        <p class="eyebrow">Hi, I'm</p>
+        <h1>Gonzalo Dalmau</h1>
+        <p class="lead">
+          A passionate web developer and Computer Science student at Brock
+          University.
+        </p>
+        <p class="availability">Open to Winter and Summer co-op placements</p>
+        <div class="button-row">
+          <a class="btn btn-primary" href="work.html">View My Work</a>
+          <a class="btn" href="https://github.com/GonzaloDalmau" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+          <!-- TODO(Gonzalo): add after placing the reviewed PDF in assets/
+          <a class="btn" href="assets/Gonzalo-Dalmau-Resume.pdf" download>Resume</a>
+          -->
         </div>
-      </div>
-      <div class="project-card">
-        <div class="project-content">
-          <h3>HPC Media</h3>
-          <p>Description of Project 1.</p>
-          <button class="project-button">
-            <a
-              href="https://github.com/GonzaloDalmau/powerlifting-tracker"
-              style="text-decoration: none; color: black"
-            >
-              View on GitHub
-            </a>
-          </button>
+      </section>
+
+      <section class="section" aria-labelledby="projects-title">
+        <div class="section-heading">
+          <h2 id="projects-title">Projects</h2>
+          <a href="work.html">See all work →</a>
         </div>
-      </div>
-    </div>
-    <section id="skills">
-      <h2>Skills</h2>
-      <p class="section-description">Technologies I've been working with.</p>
+        <div class="card-grid">
+          <article class="card">
+            <h3>Lift Log</h3>
+            <p>
+              A full-stack powerlifting tracker where lifters log sessions,
+              organize training into blocks, and track all-time PRs, weight-class
+              progress, and estimated 1RMs.
+            </p>
+            <ul class="skill-list project-stack" aria-label="Technologies used">
+              <li>JavaScript</li>
+              <li>Node.js</li>
+              <li>Express</li>
+              <li>PostgreSQL</li>
+              <li>JWT</li>
+            </ul>
+            <a class="btn" href="https://github.com/GonzaloDalmau/powerlifting-tracker" target="_blank" rel="noopener noreferrer">View on GitHub ↗</a>
+          </article>
+          <article class="card">
+            <h3>HPC Media</h3>
+            <!-- TODO(Gonzalo): replace with a summary, stack, and the correct repo link. -->
+            <p>Project details coming soon.</p>
+          </article>
+        </div>
+      </section>
 
-      <div class="skill-buttons">
-        <button id="showSkillsButton">All Skills</button>
-        <button id="favouriteSkillsButton">Favorites</button>
-      </div>
+      <section id="skills" class="section" aria-labelledby="skills-title">
+        <h2 id="skills-title">Skills</h2>
+        <p class="section-description">Technologies I've been working with.</p>
+        <div id="skillsContainer" class="skills-groups"></div>
+      </section>
+    </main>
 
-      <div id="skillsContainer" class="skills-grid"></div>
-    </section>
-
-    <footer>
+    <footer class="site-footer">
       <p>
-        Socials:
-        <a
-          href="https://instagram.com"
-          target="_blank"
-          rel="noopener noreferrer"
-          >Instagram</a
-        >
-        |
-        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer"
-          >LinkedIn</a
-        >
-        |
-        <a href="https://github.com" target="_blank" rel="noopener noreferrer"
-          >GitHub</a
-        >
+        <a href="https://github.com/GonzaloDalmau" target="_blank" rel="noopener noreferrer">GitHub</a>
+        ·
+        <a href="https://www.linkedin.com/in/gonzalo-dalmau" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        ·
+        <a href="mailto:gonzalo.a.dalmau@outlook.com">Email</a>
       </p>
     </footer>
-    <script src="skils.js"></script>
+    <script src="theme.js"></script>
+    <script src="skills.js"></script>
   </body>
 </html>

@@ -1,28 +1,70 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="theme.css">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-		<title>Portfolio</title>
-        <script>
-            if (localStorage.getItem("theme") === "dark") {
-                document.documentElement.classList.add("dark-mode");
-            }
-        </script>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact | Gonzalo Dalmau</title>
+    <meta name="description" content="Get in touch with Gonzalo Dalmau, a web developer and Computer Science student." />
+    <meta property="og:title" content="Contact | Gonzalo Dalmau" />
+    <meta property="og:description" content="Get in touch with Gonzalo Dalmau." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://gonzalodalmau.github.io/contact.html" />
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <script>
+      (function () {
+        var saved = null;
+        try { saved = localStorage.getItem("theme"); } catch (e) {}
+        if (saved === "dark" || (!saved && matchMedia("(prefers-color-scheme: dark)").matches)) {
+          document.documentElement.classList.add("dark-mode");
+        }
+      })();
+    </script>
+    <link rel="stylesheet" href="theme.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <nav class="site-nav" aria-label="Main">
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="work.html">Work</a></li>
+          <li><a href="education.html">Education</a></li>
+          <li><a href="contact.html" aria-current="page">Contact</a></li>
+        </ul>
+        <button id="themeToggle" class="theme-toggle" type="button" aria-label="Dark mode">
+          <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3a9 9 0 1 0 9 9 7 7 0 0 1-9-9Z" /></svg>
+          <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 7a5 5 0 1 0 0 10 5 5 0 0 0 0-10ZM11 1h2v3h-2V1Zm0 19h2v3h-2v-3ZM1 11h3v2H1v-2Zm19 0h3v2h-3v-2ZM4.2 2.8l2.1 2.1-1.4 1.4-2.1-2.1 1.4-1.4Zm14.9 14.9 2.1 2.1-1.4 1.4-2.1-2.1 1.4-1.4ZM2.8 19.8l2.1-2.1 1.4 1.4-2.1 2.1-1.4-1.4ZM17.7 4.9l2.1-2.1 1.4 1.4-2.1 2.1-1.4-1.4Z" /></svg>
+        </button>
+      </nav>
+    </header>
 
-	</head>
-	<body>
-        <nav> <a href="index.html">Home</a> | <a href="contact.html">Contact</a> | <a href="education.html">Education</a> 
-            <button><i class ="material-icons">dark_mode</i></button>       
-        </nav>
-        <article>
-            <h3>Contact Me</h3>
-            <p>Hello! I'm a passionate web developer with a love for creating dynamic and user-friendly websites. I enjoy learning new technologies and continuously improving my skills.</p>
-        </article>
-            <p>Socials: <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">Instagram</a> | <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">LinkedIn</a> | <a href="https://github.com" target="_blank" rel="noopener noreferrer">GitHub</a></p>
-        </footer>
-        <script src="skils.js"></script>
-	</body>
+    <main id="main">
+      <section class="section">
+        <h1>Contact Me</h1>
+        <p class="lead">
+          I'm a passionate web developer who loves creating dynamic,
+          user-friendly websites and learning new technologies. Feel free to
+          reach out.
+        </p>
+        <p class="availability">Open to Winter and Summer co-op placements</p>
+        <div class="button-row">
+          <a class="btn btn-primary" href="mailto:gonzalo.a.dalmau@outlook.com">Email Me</a>
+          <a class="btn" href="https://www.linkedin.com/in/gonzalo-dalmau" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+          <a class="btn" href="https://github.com/GonzaloDalmau" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+        </div>
+        <p class="contact-email">gonzalo.a.dalmau@outlook.com</p>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>
+        <a href="https://github.com/GonzaloDalmau" target="_blank" rel="noopener noreferrer">GitHub</a>
+        ·
+        <a href="https://www.linkedin.com/in/gonzalo-dalmau" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        ·
+        <a href="mailto:gonzalo.a.dalmau@outlook.com">Email</a>
+      </p>
+    </footer>
+    <script src="theme.js"></script>
+  </body>
 </html>
