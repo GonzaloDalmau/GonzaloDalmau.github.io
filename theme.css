@@ -302,6 +302,10 @@ main {
   gap: var(--space-2);
 }
 
+.card-grid-wide {
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 380px), 1fr));
+}
+
 .card {
   display: flex;
   flex-direction: column;
@@ -374,6 +378,13 @@ main {
   margin: 0;
   padding-left: 1.25rem;
   color: var(--muted);
+}
+
+.card .project-tag {
+  margin-bottom: var(--space-1);
+  color: var(--accent);
+  font-size: 0.85rem;
+  font-weight: 700;
 }
 
 .project-stack {
